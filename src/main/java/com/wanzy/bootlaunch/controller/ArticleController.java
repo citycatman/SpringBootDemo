@@ -20,7 +20,7 @@ public class ArticleController {
     public AjaxResponse getArticle(@PathVariable("id") Long id){
         Article article = Article.builder()
                 .id(1L)
-                .author("Zuyong Wan")
+                .author("Hogan Wan")
                 .content("This is my first Spring boot Programing.")
                 .title("My Book")
                 .createTime(new Date())
