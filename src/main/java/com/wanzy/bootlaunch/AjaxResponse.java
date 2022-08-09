@@ -18,7 +18,7 @@ public class AjaxResponse {
                 .success(true)
                 .code(200)
                 .plant(plant)
-                .msg("查询成功。")
+                .msg("请求响应成功。")
                 .build();
     }
     public static AjaxResponse success(Object plant,int totalProperty){
@@ -27,7 +27,7 @@ public class AjaxResponse {
                 .code(200)
                 .plant(plant)
                 .totalProperty(totalProperty)
-                .msg("查询成功。")
+                .msg("请求响应成功。")
                 .build();
     }
 
@@ -38,6 +38,26 @@ public class AjaxResponse {
                 .plant(plant)
                 .totalProperty(totalProperty)
                 .msg(msg)
+                .build();
+    }
+
+    public static AjaxResponse error400(Object error){
+        return AjaxResponse.builder()
+                .success(false)
+                .code(400)
+                .plant(error)
+                .totalProperty(0)
+                .msg("请求参数错误！")
+                .build();
+    }
+
+    public static AjaxResponse error500(Object error){
+        return AjaxResponse.builder()
+                .success(false)
+                .code(500)
+                .plant(error)
+                .totalProperty(0)
+                .msg("服务器错误，请联系管理员！")
                 .build();
     }
 }
