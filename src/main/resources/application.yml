@@ -6,3 +6,6 @@ spring:
       enabled: true
       additional-paths: src/main/java
       exclude: /META-INF/maven, /META-INF/resources, /resources, /static, /public, /templates
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8

@@ -12,7 +12,13 @@ public class AjaxResponse {
     private Object plant;
     private Object items;
     private int totalProperty;
-
+    public static AjaxResponse success(){
+        return AjaxResponse.builder()
+                .success(true)
+                .code(200)
+                .msg("请求响应成功。")
+                .build();
+    }
     public static AjaxResponse success(Object plant){
         return AjaxResponse.builder()
                 .success(true)
