@@ -4,7 +4,6 @@ import lombok.Builder;
 import lombok.Data;
 
 import java.util.Date;
-import java.util.List;
 
 @Data
 @Builder
@@ -14,6 +13,4 @@ public class Article {
     private String content;
     private Date createTime;
     private String title;
-
-    private List<Reader> reader;
 }
